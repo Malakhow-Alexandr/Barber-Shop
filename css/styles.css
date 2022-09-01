@@ -1,0 +1,16 @@
+:root {
+    /* bg-colors */
+    --primary-bg-color:#FFFFFF;
+    --secondary-bg-color:#F7F7F7;
+    --third-bg-color:#191C26;
+    /* text colors */
+    --primary-text-color:#FFFFFF;
+    --accent-color:#FF6C00;
+    --upper-title-text-color:rgba(157, 164, 189, 0.6);
+    --sub-title-text-color:#9da4bd;
+    --title-text-color:#303030;
+    --discription-text-color:color: #555555;
+    --form-text-color:rgba(157, 164, 189, 0.4);
+
+    --card-shadow:6px 6px 15px rgba(0, 0, 0, 0.2);
+}
