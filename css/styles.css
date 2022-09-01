@@ -13,4 +13,117 @@
     --form-text-color:rgba(157, 164, 189, 0.4);
 
     --card-shadow:6px 6px 15px rgba(0, 0, 0, 0.2);
+
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+body{
+    background-color: var(--primary-bg-color);
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    color: var(--title-text-color);
+}
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+}
+/* Header */
+.header {
+  background-color: var(--third-bg-color);
+}
+.header__container {
+  display: flex;
+  align-items: center;
+}
+.site-nav__list {
+  display: flex;
+  margin-left: 71px;
+  gap: 30px;
+}
+.order-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 45px;
+}
+.logo__icon{
+  fill: var(--primary-text-color);
+  transition: fill 250ms var(--timing-function),
+  transform 250ms var(--timing-function);
+}
+.logo:hover .logo__icon,
+.logo:focus .logo__icon {
+  transform: scale(1.5);
+  fill:var(--accent-color);
+}
+.site-nav__link {
+  display: block;
+  padding: 52px 0px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  color: var(--primary-text-color);
+  transition: color 250ms var(--timing-function),
+  transform 250ms var(--timing-function);
+}
+.site-nav__link:hover,
+.site-nav__link:focus {
+  color: var(--accent-color);
+  transform: scale(1.3);
+}
+
+.order-container__tell {
+  display: block;
+  padding: 52px 0px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  transition: color 250ms var(--timing-function),
+  transform 250ms var(--timing-function);
+}
+.order-container__tell:hover,
+.order-container__tell:focus {
+  color: var(--accent-color);
+  transform: scale(1.4);
+}
+.order-container__button {
+  width: 160px;
+  height: 40px;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+  transition: color 250ms var(--timing-function),
+  border-color 250ms var(--timing-function),
+  transform 250ms var(--timing-function);
+  }
+.order-container__button:hover,
+.order-container__button:focus {
+  border-color: var(--primary-text-color);
+  color: var(--accent-color);
+  transform: scale(1.4);
 }
