@@ -16,7 +16,7 @@
 
     --card-shadow:6px 6px 15px rgba(0, 0, 0, 0.2);
     --button-shadow:0px 4px 4px rgba(0, 0, 0, 0.15);
-
+    --cards-old-trad-school-shadow: 6px 6px 15px rgba(0, 0, 0, 0.05);
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body{
@@ -424,6 +424,87 @@ color: var(--upper-title-button-dark-theme-color);
   color: var(--accent-color);
   border-color:var(--sub-title-dark-theme-color);
   background-color: var(--prices-bg-color);
+}
+
+
+  /* Benefits */
+.benefits{
+    padding: 130px;
+  }
+.benefits__container {
+    display: flex;
+    gap: 130px;
+    justify-content: center;
+  }
+.benefits-left-container {
+  width: 370px;
+}
+.benefits-left-container__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.benefits-left-container__quanity {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: var(--title-text-color-light-theme);
+}
+.benefits-left-container__decor {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  text-align: center;
+  color: var(--accent-color);
+}
+.benefits-left-container__meta {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-align: center;
+  color: var(--title-text-color-light-theme);
+
+}
+.benefits-right-container { 
+  width: 500px;
+}
+.benefits-right-container__uppertitle {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--title-text-color-light-theme);
+}
+.benefits-right-container__uppertitle::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--title-text-color-light-theme);
+}
+.benefits-right-container__title {
+  margin-bottom: 20px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+  color: var(--title-text-color-light-theme);
+}
+.benefits-right-container__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: var(--title-text-color-light-theme);
 }
   /* Staff */
 .staff {
