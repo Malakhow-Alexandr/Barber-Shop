@@ -12,7 +12,15 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
+      />
+      <!-- animate -->
+        <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <!-- Aos animate -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -42,7 +50,7 @@
         <div class="order-container">
           <a href="tel:+380441111111" class="order-container__tell"
             >+38 044 111 11 11</a
-          ><button type="button" class="order-container__button" data-modal-open>
+          ><button type="button" class="order-container__button animate__animated animate__shakeX" data-modal-open>
             Online-booking
           </button>
         </div>
@@ -53,10 +61,10 @@
         <div class="hero__container container">
           <div class="hero__sidebar">
             <ul class=" sidebar-list standart-list">
-              <li class="sidebar-list__item">
+              <li class="sidebar-list__item animate__animated animate__fadeInLeftBig">
                 <a class="sidebar-list__link sidebar-list__link-before" href="#">Instagram</a>
               </li>
-              <li class="sidebar-list__item">
+              <li class="sidebar-list__item animate__animated animate__fadeInLeftBig">
                 <a class="sidebar-list__link" href="#">Youtube</a>
               </li>
             </ul>
@@ -64,12 +72,12 @@
           <div class="hero__main">
             <div class="group-title">
               <p
-                class="group-title__uppertitle group-title__uppertitle--dark-theme text"
+                class="group-title__uppertitle group-title__uppertitle--dark-theme animate__animated animate__zoomInDown text"
               >
                 A hair salon for men in Kyiv
               </p>
-              <h1 class="group-title__main-title text">BarberShop</h1>
-              <p class="group-title__subtitle text">
+              <h1 class="group-title__main-title animate__animated animate__zoomInDown text">BarberShop</h1>
+              <p class="group-title__subtitle animate__animated animate__zoomInDown text">
                 We are experts in trendy men’s haircuts. We work quickly,
                 carefully and with style.
               </p>
@@ -131,8 +139,8 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button type="button" class="about-button" data-modal-open>
-              <span class="about-button__text text">ONLINE-BOOKING</span>
+            <button type="button" class="about-button">
+              ONLINE-BOOKING
             </button>
           </div>
         </div>
@@ -407,14 +415,14 @@
           </ul>
         </div>
       </section>
-      <section class="gallery">
+      <section class="gallery" >
         <div class="container">
           <p class="gallery__uppertitle text">
             in Latin, "barba" means "beard"
           </p>
           <h2 class="gallery__title visualy-hidden">Gallery</h2>
           <ul class="gallery-card-set standart-list">
-            <li class="gallery-card-set__item">
+            <li class="gallery-card-set__item" data-aos="fade-right"data-aos-duration="800">
               <img
                 src="./images/first.jpg"
                 alt="a haircut"
@@ -423,7 +431,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-card-set__item">
+            <li class="gallery-card-set__item" data-aos="fade-right"data-aos-duration="800"data-aos-delay="250">
               <img
                 src="./images/second.jpg"
                 alt="shaving"
@@ -432,7 +440,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-card-set__item">
+            <li class="gallery-card-set__item" data-aos="fade-right"data-aos-duration="800"data-aos-delay="500">
               <img
                 src="./images/third.jpg"
                 alt="facial steaming"
@@ -441,7 +449,7 @@
                 height="360"
               />
             </li>
-            <li class="gallery-card-set__item">
+            <li class="gallery-card-set__item" data-aos="fade-right"data-aos-duration="800"data-aos-delay="750">
               <img
                 src="./images/forth.jpg"
                 alt="edge trimming"
@@ -458,7 +466,7 @@
       <section class="form">
         <h2 class="form__title text">Online-booking</h2>
       </section>
-      <section class="contacts">
+      <section class="contacts" data-aos="fade-up" data-aos-duration="2000">
         <h2 class="contacts__title text">Contacts</h2>
         <address class="contacts__address">
           <ul class="contacts__list standart-list">
@@ -509,5 +517,7 @@
     </div>
     <script src="./js/modal.js"></script>
     <script src="./js/header-scroll.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos-animate.js"></script>
   </body>
 </html>
