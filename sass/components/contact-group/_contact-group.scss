@@ -1,0 +1,17 @@
+.contacts-group{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $third-bg-color;
+    background-image: url(../images/contacts/contacts-bg.webp);
+    background-repeat: no-repeat;
+    background-position: left calc(50% + 625px) top;
+  }
+.contacts-group-container {
+  @extend %container;
+    display: flex;
+    }
+
+
+ 
+

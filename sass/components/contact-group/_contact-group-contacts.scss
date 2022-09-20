@@ -1,0 +1,77 @@
+.contacts {
+  flex-basis: 50%;
+  padding: 130px 0px 130px 100px;
+}
+.contacts__title {
+  @extend %text;
+  margin-bottom: 40px;
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+  color: $primary-text-color;
+}
+.contacts__address {
+  margin-bottom: 70px;
+  font-style: normal;
+}
+.contacts__list {
+  @extend %list;
+}
+.contacts__list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contacts__link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: $sub-title-dark-theme-color;
+  transition: color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.contacts__icon {
+  fill: none;
+  stroke: $sub-title-dark-theme-color;
+  transition: stroke 250ms $timing-function;
+  .contacts__link:hover &,
+  .contacts__link:focus & {
+    stroke: $accent-color;
+  }
+}
+.contacts__uppertitle {
+  @extend %text;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $primary-text-color;
+  &::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: $form-text-color;
+  }
+}
+
+.contacts__schedule {
+    @extend %text;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: $sub-title-dark-theme-color;
+}

@@ -1,0 +1,9 @@
+.hero {
+  padding: 0;
+}
+.hero__container{
+  @extend %container;
+  position: relative;
+  display: flex;
+}
+

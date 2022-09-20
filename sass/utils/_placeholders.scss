@@ -1,0 +1,30 @@
+%container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px;
+}
+
+%text {
+  padding: 0;
+  margin: 0;
+}
+
+%list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%group-title__uppertitle{
+  margin-bottom: 20px;
+  display: flex ;
+  align-items: center;
+  gap:20px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;}
+

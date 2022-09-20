@@ -1,0 +1,59 @@
+.scroll-list {
+  @extend %list;
+  position: absolute;
+  right: 35px;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.scroll-list__button {
+  min-width: 60px;
+  padding: 0;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid $upper-title-button-dark-theme-color;
+  background-color: transparent;
+  color: $primary-text-color;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.1em;
+  color: $upper-title-button-dark-theme-color;
+  transition: transform 250ms $timing-function, color 250ms $timing-function,
+    border-color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+    color: $primary-text-color;
+    border-color: $primary-text-color;
+  }
+}
+.scroll-list__item:first-child .scroll-list__button {
+  text-align: left;
+}
+.scroll-list__item:last-child .scroll-list__button {
+  text-align: right;
+}
+.slider-pagination {
+  position: absolute;
+  top: calc(50% - 15px);
+  right: 20px;
+}
+.slider-pagination__item {
+  margin-left: auto;
+  width: 8px;
+  height: 2px;
+  background-color: $sub-title-dark-theme-color;
+}
+.slider-pagination__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+.slider-pagination__item--active {
+  margin-bottom: 12px;
+  width: 18px;
+  height: 2px;
+  background-color: $sub-title-dark-theme-color;
+}

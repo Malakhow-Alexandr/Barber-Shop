@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  transition: backdrop-filter $hero-animation, background-color $hero-animation;
+}
+.header.no-transparency {
+  backdrop-filter: blur(4px);
+  background-color: $header-bg-color;
+}
+.header__container {
+  @extend %container;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.logo {
+  margin-right: 132px;
+}
+.logo__icon {
+  fill: $title-text-color-light-theme;
+  transition: fill 250ms $timing-function, transform 250ms $timing-function;
+  .logo:hover &,
+  .logo:focus & {
+  transform: scale(1.5);
+  fill: $accent-color;
+}
+}
+
+
+
