@@ -1,5 +1,5 @@
 /* text colors */
-.gallery__title {
+.register-form__checkbox, .gallery__title {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1005,10 +1005,10 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(360deg);
   width: 500px;
-  height: 500px;
+  min-height: 500px;
   padding: 40px;
   background-color: #FFFFFF;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1021,40 +1021,45 @@ img {
   position: absolute;
   top: -15px;
   right: -15px;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  border: 1px solid #303030;
+  border: 1px solid #9da4bd;
   border-radius: 50%;
   background-color: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button:hover, .modal-button:focus {
-  border-color: #FF6C00;
+  border-color: black;
+  background-color: #FF6C00;
 }
 
 .modal-button__icon {
+  fill: #9da4bd;
+  transform: scale(0.6);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button:hover .modal-button__icon, .modal-button:focus .modal-button__icon {
-  fill: #FF6C00;
+  fill: black;
+  transform: scale(0.7);
 }
 
 .register-form__title {
   display: block;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-weight: 700;
   font-size: 17px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: black;
 }
 
 .register-form__group {
@@ -1062,52 +1067,181 @@ img {
 }
 
 .register-form__field {
+  position: relative;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 25px;
 }
 
 .register-form__label {
   display: block;
   font-size: 14px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.register-form__input:focus + .register-form__label {
+  transform: translate(-50px, -45px) scale(0.8);
+}
+.register-form__input:not(:-moz-placeholder-shown) + .register-form__label {
+  transform: translate(-50px, -45px) scale(0.8);
+}
+.register-form__input:not(:-ms-input-placeholder) + .register-form__label {
+  transform: translate(-50px, -45px) scale(0.8);
+}
+.register-form__input:not(:placeholder-shown) + .register-form__label {
+  transform: translate(-50px, -45px) scale(0.8);
 }
 
-.register-form__agreement {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
+.register-form__input {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 42px;
+  padding-right: 42px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.register-form__input:invalid {
-  outline-color: red;
+.register-form__input:focus {
+  border-color: #FF6C00;
 }
-
-.register-form__input:valid {
-  outline-color: green;
+.register-form__input:not(:-moz-placeholder-shown) {
+  border-color: green;
 }
-
-.register-form__message:not(:-moz-placeholder-shown) {
-  outline-color: pink;
+.register-form__input:not(:-ms-input-placeholder) {
+  border-color: green;
 }
-
-.register-form__message:not(:-ms-input-placeholder) {
-  outline-color: pink;
+.register-form__input:not(:placeholder-shown) {
+  border-color: green;
 }
-
-.register-form__message:not(:placeholder-shown) {
-  outline-color: pink;
+.register-form__input::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.register-form__input:-moz-placeholder-shown {
-  border: 1px solid green;
-}
-
 .register-form__input:-ms-input-placeholder {
-  border: 1px solid green;
+  opacity: 0;
+  -ms-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.register-form__input::placeholder {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.register-form__input:focus::-moz-placeholder {
+  opacity: 1;
+}
+.register-form__input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+.register-form__input:focus::placeholder {
+  opacity: 1;
 }
 
-.register-form__input:placeholder-shown {
-  border: 1px solid green;
+.register-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  fill: black;
+}
+.register-form__input:focus ~ .register-form__icon {
+  fill: #FF6C00;
+}
+.register-form__input:not(:-moz-placeholder-shown) ~ .register-form__icon {
+  fill: #FF6C00;
+}
+.register-form__input:not(:-ms-input-placeholder) ~ .register-form__icon {
+  fill: #FF6C00;
+}
+.register-form__input:not(:placeholder-shown) ~ .register-form__icon {
+  fill: #FF6C00;
+}
+
+.register-form__notification-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: block;
+}
+
+.register-form__input:not(:-moz-placeholder-shown):focus:invalid ~ .register-form__notification-icon .warning {
+  opacity: 1;
+}
+
+.register-form__input:not(:-ms-input-placeholder):focus:invalid ~ .register-form__notification-icon .warning {
+  opacity: 1;
+}
+
+.register-form__input:not(:placeholder-shown):focus:invalid ~ .register-form__notification-icon .warning {
+  opacity: 1;
+}
+
+.register-form__input:not(:-moz-placeholder-shown):focus:valid ~ .register-form__notification-icon .success {
+  opacity: 1;
+}
+
+.register-form__input:not(:-ms-input-placeholder):focus:valid ~ .register-form__notification-icon .success {
+  opacity: 1;
+}
+
+.register-form__input:not(:placeholder-shown):focus:valid ~ .register-form__notification-icon .success {
+  opacity: 1;
+}
+
+.success,
+.warning {
+  opacity: 0;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.warning {
+  fill: red;
+}
+
+.success {
+  fill: green;
+}
+
+.register-form__message {
+  width: 100%;
+  height: 130px;
+  padding: 18px;
+  resize: none;
+  outline: transparent;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.register-form__message::-moz-placeholder {
+  font-size: 14px;
+}
+.register-form__message:-ms-input-placeholder {
+  font-size: 14px;
+}
+.register-form__message::placeholder {
+  font-size: 14px;
+}
+.register-form__message:focus {
+  border-color: #FF6C00;
+}
+.register-form__message:not(:-moz-placeholder-shown) {
+  border-color: #FF6C00;
+}
+.register-form__message:not(:-ms-input-placeholder) {
+  border-color: #FF6C00;
+}
+.register-form__message:not(:placeholder-shown) {
+  border-color: #FF6C00;
+}
+
+.register-form__message-title {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .register-form__button {
@@ -1155,4 +1289,49 @@ img {
   background: green;
   background: linear-gradient(0deg, rgb(2, 189, 80) 0%, rgb(3, 107, 11) 100%);
   transform: scale(1);
+}
+
+.register-form__agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.register-form__checkbox:checked + .register-form__checkbox-icon .register-form__checkbox-icon-checked {
+  opacity: 1;
+}
+.register-form__checkbox:checked + .register-form__checkbox-icon .register-form__checkbox-icon-unchecked {
+  opacity: 0;
+}
+
+.register-form__checkbox-icon {
+  margin-right: 10px;
+}
+
+.register-form__checkbox-icon-checked {
+  opacity: 0;
+  fill: green;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form__checkbox-icon-unchecked {
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form__checkbox-meta {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.6153846154;
+  letter-spacing: 0.02em;
+  color: black;
+}
+
+.register-form__checkbox-link {
+  font-size: 12px;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  text-decoration: underline;
+  color: #FF6C00;
 }/*# sourceMappingURL=main.css.map */

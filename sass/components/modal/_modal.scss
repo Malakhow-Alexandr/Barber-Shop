@@ -19,10 +19,10 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(360deg);
   width: 500px;
-  height: 500px;
+  min-height: 500px;
   padding: 40px;
   background-color: $primary-bg-color;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: $card-shadow;
   transition: transform 250ms $timing-function;
 
@@ -34,28 +34,35 @@
   position: absolute;
   top: -15px;
   right: -15px;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  border: 1px solid $title-text-color-light-theme;
+  border: 1px solid $sub-title-dark-theme-color;
   border-radius: 50%;
+  
   background-color: $primary-bg-color;
   box-shadow: $button-shadow;
   cursor: pointer;
-  transition: border-color 250ms $timing-function;
+  transition: border-color 250ms $timing-function,
+  background-color 250ms $timing-function,
+  transform 250ms $timing-function;
   &:hover,
   &:focus {
-    border-color: $accent-color;
+    border-color: $primary-black-color;
+    background-color: $accent-color;
   }
 }
 
 .modal-button__icon {
+  fill: $sub-title-dark-theme-color;
+  transform: scale(0.6);
   transition: fill 250ms $timing-function;
   .modal-button:hover &,
   .modal-button:focus & {
-    fill: $accent-color;
+    fill: $primary-black-color;
+    transform: scale(0.7);
   }
 }
