@@ -21,7 +21,7 @@
   width: 1200px;
 }
 
-.register-form__title, .footer__discription, .contacts__schedule, .contacts__uppertitle, .contacts__title, .form__title, .gallery__uppertitle, .staff-card-set__meta, .staff-card-set__title, .staff-container__title, .staff-container__uppertitle, .benefits-right-container__subtitle, .benefits-right-container__title, .benefits-right-container__uppertitle, .benefits-left-container__meta, .benefits-left-container__quanity, .prices__title, .prices__uppertitle, .about-meta-group__meta, .about-meta-group__sub-title, .about-meta-group__title, .about-meta-group__uppertitle, .group-title__main-title, .group-title__uppertitle--dark-theme {
+.register-form__title, .footer__discription, .contacts__schedule, .contacts__uppertitle, .contacts__title, .contacts-form__title, .gallery__uppertitle, .staff-card-set__meta, .staff-card-set__title, .staff-container__title, .staff-container__uppertitle, .benefits-right-container__subtitle, .benefits-right-container__title, .benefits-right-container__uppertitle, .benefits-left-container__meta, .benefits-left-container__quanity, .prices__title, .prices__uppertitle, .about-meta-group__meta, .about-meta-group__sub-title, .about-meta-group__title, .about-meta-group__uppertitle, .group-title__main-title, .group-title__uppertitle--dark-theme {
   padding: 0;
   margin: 0;
 }
@@ -634,6 +634,23 @@ img {
   align-items: flex-start;
 }
 
+.benefits-left-container__list-item {
+  width: 170px;
+  min-height: 133px;
+  padding: 20px 24px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.benefits-left-container__list-item:first-child {
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.benefits-left-container__list-item:nth-child(even) {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
 .benefits-left-container__quanity {
   font-weight: 700;
   font-size: 42px;
@@ -843,18 +860,145 @@ img {
   display: flex;
 }
 
-.form {
+.section-contacts-form {
   flex-basis: 50%;
   padding: 130px 0px;
+  padding-right: 30px;
 }
 
-.form__title {
+.contacts-form__title {
+  margin-bottom: 44px;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 42px;
   line-height: 1.1666666667;
   letter-spacing: 0.05em;
   color: #FFFFFF;
+}
+
+.contacts-group-form__form-field {
+  position: relative;
+}
+.contacts-group-form__form-field:first-child {
+  margin-right: 30px;
+}
+
+.contacts-group-form__form-input {
+  width: 250px;
+  min-height: 24px;
+  margin-bottom: 44px;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3636363636;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  outline: none;
+}
+.contacts-group-form__form-input:focus {
+  border-color: #FFFFFF;
+}
+.contacts-group-form__form-input:not(:-moz-placeholder-shown) {
+  border-color: #FFFFFF;
+}
+.contacts-group-form__form-input:not(:-ms-input-placeholder) {
+  border-color: #FFFFFF;
+}
+.contacts-group-form__form-input:not(:placeholder-shown) {
+  border-color: #FFFFFF;
+}
+.contacts-group-form__form-input::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-group-form__form-input:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-group-form__form-input::placeholder {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-group-form__form-input:focus::-moz-placeholder {
+  opacity: 1;
+}
+.contacts-group-form__form-input:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+.contacts-group-form__form-input:focus::placeholder {
+  opacity: 1;
+}
+
+.contacts-group-form__form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3636363636;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-group-form__form-input:focus + .contacts-group-form__form-label {
+  transform: translateY(-20px);
+  color: #FFFFFF;
+}
+.contacts-group-form__form-input:not(:-moz-placeholder-shown) + .contacts-group-form__form-label {
+  transform: translateY(-20px);
+  color: #FFFFFF;
+}
+.contacts-group-form__form-input:not(:-ms-input-placeholder) + .contacts-group-form__form-label {
+  transform: translateY(-20px);
+  color: #FFFFFF;
+}
+.contacts-group-form__form-input:not(:placeholder-shown) + .contacts-group-form__form-label {
+  transform: translateY(-20px);
+  color: #FFFFFF;
+}
+
+.contacts-group-form__notification-icon {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}
+.contacts-group-form__form-input:not(:-moz-placeholder-shown):focus:invalid ~ .contacts-group-form__notification-icon .notification-icon-warning {
+  opacity: 1;
+}
+.contacts-group-form__form-input:not(:-ms-input-placeholder):focus:invalid ~ .contacts-group-form__notification-icon .notification-icon-warning {
+  opacity: 1;
+}
+.contacts-group-form__form-input:not(:placeholder-shown):focus:invalid ~ .contacts-group-form__notification-icon .notification-icon-warning {
+  opacity: 1;
+}
+.contacts-group-form__form-input:not(:-moz-placeholder-shown):focus:valid ~ .contacts-group-form__notification-icon .notification-icon-success {
+  opacity: 1;
+}
+.contacts-group-form__form-input:not(:-ms-input-placeholder):focus:valid ~ .contacts-group-form__notification-icon .notification-icon-success {
+  opacity: 1;
+}
+.contacts-group-form__form-input:not(:placeholder-shown):focus:valid ~ .contacts-group-form__notification-icon .notification-icon-success {
+  opacity: 1;
+}
+
+.notification-icon-warning,
+.notification-icon-success {
+  opacity: 0;
+  transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notification-icon-warning {
+  fill: red;
+}
+
+.notification-icon-success {
+  fill: green;
 }
 
 .contacts {
@@ -931,6 +1075,112 @@ img {
   line-height: 1.6666666667;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.contacts-group-form__form-message-field {
+  display: flex;
+  flex-flow: column;
+}
+
+.contacts-form-message {
+  width: 96%;
+  min-height: 24px;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: none;
+  margin-bottom: 44px;
+  background-color: transparent;
+  resize: none;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-form-message:focus {
+  border-color: #FFFFFF;
+}
+.contacts-form-message:not(:-moz-placeholder-shown) {
+  border-color: #FFFFFF;
+}
+.contacts-form-message:not(:-ms-input-placeholder) {
+  border-color: #FFFFFF;
+}
+.contacts-form-message:not(:placeholder-shown) {
+  border-color: #FFFFFF;
+}
+.contacts-form-message::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+}
+.contacts-form-message:-ms-input-placeholder {
+  opacity: 0;
+  -ms-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+}
+.contacts-form-message::placeholder {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+}
+.contacts-form-message:focus::-moz-placeholder {
+  opacity: 1;
+}
+.contacts-form-message:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+.contacts-form-message:focus::placeholder {
+  opacity: 1;
+}
+
+.contacts-group-form__form-message-label {
+  display: block;
+  margin-bottom: 60px;
+  order: -1;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3636363636;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-form-message:focus + .contacts-group-form__form-message-label {
+  color: #FFFFFF;
+}
+.contacts-form-message:not(:-moz-placeholder-shown) + .contacts-group-form__form-message-label {
+  color: #FFFFFF;
+}
+.contacts-form-message:not(:-ms-input-placeholder) + .contacts-group-form__form-message-label {
+  color: #FFFFFF;
+}
+.contacts-form-message:not(:placeholder-shown) + .contacts-group-form__form-message-label {
+  color: #FFFFFF;
+}
+
+.contacts-group__button {
+  width: 160px;
+  min-height: 40px;
+  border-radius: 25px;
+  border-color: #FF6C00;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.3333333333;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contacts-group__button:hover, .contacts-group__button:focus {
+  transform: scale(1.2);
+  color: red;
+  border-color: color #555555;
+  background-color: #111319;
 }
 
 .footer {

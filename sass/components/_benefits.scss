@@ -17,6 +17,21 @@
   flex-wrap: wrap;
   align-items: flex-start;
 }
+.benefits-left-container__list-item{
+  width: 170px;
+  min-height: 133px;
+  padding: 20px 24px;
+
+  text-align: center;
+  background-color: #f7f7f7;
+}
+.benefits-left-container__list-item:first-child {
+  box-shadow: $card-shadow;
+}
+.benefits-left-container__list-item:nth-child(even){
+  margin-top: 30px;
+  margin-left: 30px;
+}
 .benefits-left-container__quanity {
   @extend %text;
   font-weight: 700;
