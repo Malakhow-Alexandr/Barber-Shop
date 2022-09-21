@@ -44,6 +44,35 @@
   width: 370px;
   box-shadow: $card-shadow;
 }
+
+.staff-card-set__overlay-thumb{
+  position: relative;
+  overflow: hidden;
+}
+.staff-card-set__card-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 346px;
+  padding: 15px;
+  backdrop-filter: blur(4px);
+  background-color: rgba(10, 15, 11, 0.3);
+  transform: translateY(100%);
+  transition: transform 250ms $timing-function;
+  .staff-card-set__thumb:hover &,
+  .staff-card-set__thumb:focus & {
+    transform: translateY(0)
+}
+}
+.staff-card-set__overlay-text {
+  @extend %text;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+}
 .staff-card-set__meta-container {
   padding: 30px 82px;
   text-align: center;

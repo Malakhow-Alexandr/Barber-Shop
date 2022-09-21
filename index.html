@@ -135,7 +135,7 @@
               are a team that is always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button type="button" class="about-button"> ONLINE-BOOKING </button>
+            <button type="button" class="about-button" data-modal-open> ONLINE-BOOKING </button>
           </div>
         </div>
       </section>
@@ -183,7 +183,7 @@
             </ul>
           </div>
           <div class="price-button-container">
-            <button class="prices-button" type="button">online-booking</button>
+            <button class="prices-button" type="button" data-modal-open>online-booking</button>
           </div>
         </div>
       </section>
@@ -234,7 +234,18 @@
           <ul class="staff-card-set">
             <li class="staff-card-set__item">
               <div class="staff-card-set__thumb">
-                <img src="./images/John.jpg" alt="" width="370" height="346" />
+                <div class="staff-card-set__overlay-thumb">
+                  <img src="./images/John.jpg" alt="" width="370" height="346" />
+                  <div class="staff-card-set__card-overlay">
+                    <p class="staff-card-set__overlay-text"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      Sunt, incidunt! Commodi facilis aut placeat voluptatem voluptate mollitia molestiae temporibus enim qui minima, 
+                      optio repellat asperiores maxime est ipsa odio fugit maiores ex dolor eligendi nisi sint perspiciatis.
+                       Provident rerum ex facere accusamus culpa veniam velit inventore recusandae nesciunt dolorem. 
+                      </p
+                    >
+                  </div>
+                </div>
                 <div class="staff-card-set__meta-container">
                   <h3 class="staff-card-set__title">John Smith</h3>
                   <p class="staff-card-set__meta">Extreme Barber</p>
@@ -273,7 +284,17 @@
             </li>
             <li class="staff-card-set__item">
               <div class="staff-card-set__thumb">
-                <img src="./images/Michele.jpg" alt="" width="370" height="346" />
+                <div class="staff-card-set__overlay-thumb"><img src="./images/Michele.jpg" alt="" width="370" height="346" />
+                <div class="staff-card-set__card-overlay">
+                    <p class="staff-card-set__overlay-text"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      Sunt, incidunt! Commodi facilis aut placeat voluptatem voluptate mollitia molestiae temporibus enim qui minima, 
+                      optio repellat asperiores maxime est ipsa odio fugit maiores ex dolor eligendi nisi sint perspiciatis.
+                       Provident rerum ex facere accusamus culpa veniam velit inventore recusandae nesciunt dolorem. 
+                      </p
+                    >
+                  </div>
+                </div>
                 <div class="staff-card-set__meta-container">
                   <h3 class="staff-card-set__title">Michele Doe</h3>
                   <p class="staff-card-set__meta">Extreme Barber</p>
@@ -312,7 +333,17 @@
             </li>
             <li class="staff-card-set__item">
               <div class="staff-card-set__thumb">
-                <img src="./images/Alan.jpg" alt="" width="370" height="346" />
+                <div class="staff-card-set__overlay-thumb"><img src="./images/Alan.jpg" alt="" width="370" height="346" />
+                <div class="staff-card-set__card-overlay">
+                    <p class="staff-card-set__overlay-text"
+                      >Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                      Sunt, incidunt! Commodi facilis aut placeat voluptatem voluptate mollitia molestiae temporibus enim qui minima, 
+                      optio repellat asperiores maxime est ipsa odio fugit maiores ex dolor eligendi nisi sint perspiciatis.
+                       Provident rerum ex facere accusamus culpa veniam velit inventore recusandae nesciunt dolorem. 
+                      </p
+                    >
+                  </div>
+                </div>
                 <div class="staff-card-set__meta-container">
                   <h3 class="staff-card-set__title">Alan Black</h3>
                   <p class="staff-card-set__meta">Extreme Barber</p>
@@ -455,8 +486,11 @@
                 </li>
                 <li class="contacts__list-item">
                   <a href="tel:+380441111111" class="contacts__link"
-                    ><svg class="contacts__icon" width="24" height="24">
-                      <use href="./icon/icon.svg#phone"></use></svg>+38 044 111 11 11
+                    >
+                    <svg class="contacts__icon" width="24" height="24">
+                      <use href="./icon/icon.svg#phone"></use>
+                    </svg>+38 044 111 11 11
+                  </a>
                 </li>
                 <li class="contacts__list-item">
                   <a href="#" class="contacts__link"
