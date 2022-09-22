@@ -1,15 +1,12 @@
 .hero__main {
+  position: relative;
   padding-top: 272px;
   padding-bottom: 208px;
   padding-left: 100px;
   display: flex;
   flex-grow: 1;
-  background-color: $hero-bg-color;
-  background-image: url(../images/hero/hero-bg.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
+
 .group-title {
   width: 510px;
 }
