@@ -344,10 +344,6 @@ img {
   margin: 0;
 }
 
-.slick-dotted.slick-slider {
-  margin-bottom: 0;
-}
-
 .slider-container__first-img {
   width: 1071px;
   height: 680px;
@@ -360,7 +356,7 @@ img {
 .slider-container__second-img {
   width: 1071px;
   height: 680px;
-  background-image: url(./../images/hero/hero-bg-second.jpg);
+  background-image: url(../images/hero/hero-bg-second.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -369,10 +365,14 @@ img {
 .slider-container__third-img {
   width: 1071px;
   height: 680px;
-  background-image: url(./../images/hero/hero-bg-third.jpg);
+  background-image: url(../images/hero/hero-bg-third.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
 }
 
 .slick-prev,
