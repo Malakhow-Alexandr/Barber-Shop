@@ -2,13 +2,20 @@
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding: 130px 0px;
+  padding: 84px 0px;
   background-color: $prices-bg-color;
-  background-image: url(../images/prices/price-bg.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url(../images/prices/price-bg.webp);
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
   cursor: pointer;
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 130px 0px;
+  }
 }
 .prices-container {
   @extend %container;
@@ -44,25 +51,44 @@
   color: $primary-text-color;
 }
 .prices-meta-container {
-  display: flex;
   perspective: 1000px;
+  @media screen and (max-width:1199px) {
+    background-image: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    padding: 30px;
+    margin-bottom: 44px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .prices-meta-container__list {
   @extend %list;
-  width: 585px;
-  margin-bottom: 50px;
-  padding: 30px 40px;
-  transition: transform 300ms $timing-function;
+  max-width: 585px;
 
+  transition: transform 300ms $timing-function;
   animation-duration: 5s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-fill-mode: forwards;
+  
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    padding: 30px 40px;
+    width: 585px;
+  }
+  &:not(:last-child){
+    @media screen and (max-width:1199px) {
+      margin-bottom: 20px;
+    }
+     }
   .prices:hover & {
     animation-name: open;
   }
+  
 }
+
+
 @keyframes open {
   0% {
     transform: rotateY(0deg);
@@ -83,17 +109,24 @@
 }
 
 .prices-meta-container__list:first-child {
-  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  @media screen and (min-width:1200px) {
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+  
 }
 .prices-meta-container__list:last-child {
-  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  @media screen and (min-width:1200px) {
+    background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
 .prices-meta-container__list-item {
-  margin-bottom: 20px;
   display: flex;
   gap: 12px;
   align-items: baseline;
+  &:not(:last-child) {
+  margin-bottom: 20px;
+ }
 }
 .prices-meta-container__list-item::before {
   content: '';
@@ -121,6 +154,7 @@
   display: flex;
   justify-content: center;
 }
+
 .prices-button {
   width: 160px;
   min-height: 40px;

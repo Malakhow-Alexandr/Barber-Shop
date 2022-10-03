@@ -1,6 +1,14 @@
 .staff {
-  padding: 130px 0px;
+  padding: 84px 0px;
   background-color: $secondary-bg-color;
+  @media screen and (min-width:768px) {
+    padding-top: 100px;
+    padding-bottom:100px;
+  }
+  @media screen and (min-width:1200px) {
+    padding: 130px 0px;
+    
+  }
 }
 .staff-container {
   @extend %container;
@@ -36,14 +44,33 @@
 }
 .staff-card-set {
   @extend %list;
-  display: flex;
-  gap: 30px;
+  
+  @media screen and (min-width:1200px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 
+.staff-card-set__item:not(:last-child){
+    @media screen and (max-width: 1199px) {
+    margin-bottom: 64px;
+  }
+  }
+
+
 .staff-card-set__thumb {
-  width: 370px;
+  max-width: 418px;
   box-shadow: $card-shadow;
+  
+  @media screen and (min-width:729px) {
+    max-width: 450px;
+  }
+  @media screen and (min-width:1200px) {
+    max-width: 370px;
+  }
+ 
 }
+ 
 
 .staff-card-set__overlay-thumb{
   position: relative;
@@ -53,8 +80,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 370px;
-  height: 346px;
+  width: 100%;
+  height: 100%;
   padding: 15px;
   backdrop-filter: blur(4px);
   background-color: rgba(10, 15, 11, 0.3);

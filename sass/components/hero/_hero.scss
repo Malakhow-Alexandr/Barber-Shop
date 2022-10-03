@@ -1,9 +1,13 @@
 .hero {
+  display: none;
   padding: 0;
 }
 .hero__container{
   @extend %container;
   position: relative;
-  display: flex;
+  
+  @media screen and (min-width:720px) { 
+    display: flex;
+  }
 }
 

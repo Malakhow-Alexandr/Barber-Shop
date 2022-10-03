@@ -8,7 +8,10 @@
 }
 
 .group-title {
-  width: 510px;
+  max-width: 336px;
+  @media screen and (min-width:1200px) {
+    max-width: 510px;
+  }
 }
 .group-title__uppertitle--dark-theme {
   @extend %group-title__uppertitle;

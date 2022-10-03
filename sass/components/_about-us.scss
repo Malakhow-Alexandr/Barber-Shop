@@ -1,23 +1,47 @@
 .about-us {
-  padding: 130px 0px;
+  padding: 84px 0px;
   background-color: $primary-bg-color;
+  @media screen and (min-width:768px) {
+    padding-top: 100px;
+    padding-bottom:100px;
+  }
+  @media screen and (min-width:1200px) {
+    padding: 130px 0px;
+    
+  }
 
 }
 .about-us_container {
   @extend %container;
-  display: flex;
-  gap:64px;
+  
+  
+  @media screen and (min-width:768px){
+    display: flex;
+    gap: 30px;
+
+  }
+  @media screen and (min-width:1200px) {
+    gap:64px;
+  }
 }
 .about-list{
   @extend %list;
-  display: flex;
-  gap: 30px;
+  @media screen and (max-width:480px) {
+  display: none;    
+  }
+  @media screen and (min-width:690px) {
+    display: block;
+  }
+  @media screen and (min-width:1200px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 .about-list_pick {
   box-shadow: $card-shadow;
 }
 .about-meta-group {
-  width: 500px;
+  max-width: 500px;
 }
 .about-meta-group__uppertitle {
   @extend %text;
@@ -70,7 +94,7 @@
 }
 .about-button{
   display: block;
-  width: 160px;
+  max-width: 160px;
   min-height: 40px;
   border: 1px solid $accent-color;
   border-radius: 25px;

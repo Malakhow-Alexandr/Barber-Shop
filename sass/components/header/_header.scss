@@ -1,9 +1,10 @@
 .header {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
-  width: 100%;
+  max-width: 1170px;
   transition: backdrop-filter $hero-animation, background-color $hero-animation;
 }
 .header.no-transparency {
@@ -12,9 +13,12 @@
 }
 .header__container {
   @extend %container;
-  display: flex;
+  @media screen and (min-width:1200px){
+    display: flex;
   align-items: center;
   padding-left: 30px;
+    
+  }
 }
 .logo {
   margin-right: 132px;
