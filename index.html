@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Barber-Shop</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
-    />
+    >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
+    >
     <!-- animate -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    >
     <!-- Aos animate -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" >
     <!-- slider -->
     <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+    >
     <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    >
+    <link rel="stylesheet" href="./css/main.min.css" >
   </head>
   <body>
     <header class="header" data-header>
@@ -105,25 +105,21 @@
       </section>
 
       <section class="about-us">
-        <div class="about-us_container">
+        <div class="about-us__container">
           <ul class="about-list">
-            <li class="about-list_item">
-              <img
-                src="./images/about-shave.jpg"
-                alt=""
-                class="about-list_pick"
-                width="270"
-                height="445"
-              />
+            <li class="about-list__item">
+              <picture>
+                <source media="(min-width:1200px)" srcset="./images/about/shave-desc@1x.jpg 1x, ./images/about/shave-desc@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="./images/about/shave-tab@1x.jpg 1x, ./images/about/shave-tab@2x.jpg 2x">
+                <img src="./images/about/shave-tab@1x.jpg" alt="">
+              </picture>
             </li>
-            <li class="about-list_item">
-              <img
-                src="./images/about-head.jpg"
-                alt=""
-                class="about-list_pick"
-                width="270"
-                height="445"
-              />
+            <li class="about-list__item">
+              <picture>
+                <source media="(min-width:1200px)" srcset="./images/about/head-desc@1x.jpg 1x, ./images/about/head-desc@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="./images/about/head-tab@1x.jpg 1x, ./images/about/head-tab@2x.jpg 2x">
+                <img src="./images/about/shave-tab@1x.jpg" alt="">
+              </picture>
             </li>
           </ul>
           <div class="about-meta-group">
@@ -400,7 +396,7 @@
                 class="gallery-card-set__img"
                 width="270"
                 height="360"
-              />
+              >
             </li>
             <li
               class="gallery-card-set__item"
@@ -414,7 +410,7 @@
                 class="gallery-card-set__img"
                 width="270"
                 height="360"
-              />
+              >
             </li>
             <li
               class="gallery-card-set__item"
@@ -428,7 +424,7 @@
                 class="gallery-card-set__img"
                 width="270"
                 height="360"
-              />
+              >
             </li>
             <li
               class="gallery-card-set__item"
@@ -442,7 +438,7 @@
                 class="gallery-card-set__img"
                 width="270"
                 height="360"
-              />
+              >
             </li>
           </ul>
         </div>
@@ -461,7 +457,7 @@
                     required
                     minlength="4"
                     placeholder="John Smith"
-                  />
+                  >
                   <span class="contacts-group-form__form-label">NAME*</span>
                   <svg class="contacts-group-form__notification-icon" width="18" height="18">
                     <use
@@ -483,7 +479,7 @@
                     minlength="13"
                     maxlength="13"
                     placeholder="+38 044 111 11 11"
-                  />
+                  >
                   <span class="contacts-group-form__form-label">PHONE*</span>
                   <svg class="contacts-group-form__notification-icon" width="18" height="18">
                     <use
@@ -518,7 +514,7 @@
                     <svg class="contacts__icon" width="24" height="24">
                       <use href="./icon/icon.svg#map-pin"></use>
                     </svg>
-                    st. Vasilkovaya, 7A <br />
+                    st. Vasilkovaya, 7A <br >
                     Kiev, 08132</a
                   >
                 </li>
@@ -580,7 +576,7 @@
                 required
                 minlength="3"
                 placeholder="John Smith"
-              />
+              >
               <span class="register-form__label">Name</span>
               <svg class="register-form__icon" width="22" height="22">
                 <use href="./icon/icon.svg#profile"></use>
@@ -599,7 +595,7 @@
                 minlength="13"
                 maxlength="13"
                 placeholder="+38 099 999 99 99"
-              />
+              >
               <span class="register-form__label">Telephone</span>
               <svg class="register-form__icon" width="22" height="22">
                 <use href="./icon/icon.svg#phone"></use>
@@ -616,7 +612,7 @@
                 name="email"
                 required
                 placeholder="John@gmail.com"
-              />
+              >
               <span class="register-form__label">eMail</span>
               <svg class="register-form__icon" width="22" height="22">
                 <use href="./icon/icon.svg#envelope"></use>
@@ -637,7 +633,7 @@
             </label>
           </div>
           <label class="register-form__agreement">
-            <input class="register-form__checkbox" type="checkbox" name="user-agreement" required />
+            <input class="register-form__checkbox" type="checkbox" name="user-agreement" required >
             <svg class="register-form__checkbox-icon" width="20" height="20">
               <use
                 class="register-form__checkbox-icon-checked"
