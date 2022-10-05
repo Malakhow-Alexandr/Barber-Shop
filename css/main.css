@@ -997,6 +997,11 @@ img {
 .benefits-left-container {
   max-width: 420px;
 }
+@media screen and (min-width: 768px) {
+  .benefits-left-container {
+    margin-left: auto;
+  }
+}
 @media screen and (min-width: 1200px) {
   .benefits-left-container {
     max-width: 370px;
@@ -1021,9 +1026,14 @@ img {
   text-align: center;
   background-color: #f7f7f7;
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 400px) {
   .benefits-left-container__list-item {
     max-width: 130px;
+  }
+}
+@media screen and (min-width: 401px) and (max-width: 449px) {
+  .benefits-left-container__list-item {
+    max-width: 160px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1128,6 +1138,21 @@ img {
 @media screen and (min-width: 1200px) {
   .staff {
     padding: 130px 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .staff-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1377,21 +1402,21 @@ img {
 @media screen and (min-width: 480px) and (max-width: 576px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 576px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (max-width: 576px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (max-width: 576px) and (min-resolution: 2dppx) {
   .contacts-group {
     background-image: url(../images/contacts-bg/contacts-mob@2x.webp);
-    background-position: top calc(50% + 315px) left;
+    background-position: top calc(50% + 290px) left;
     background-size: contain;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 1199px) {
   .contacts-group {
     background-image: url(../images/contacts-bg/contacts-tab@1x.webp);
-    background-position: top calc(50% + 300px) left;
+    background-position: top calc(50% + 220px) left;
     background-size: contain;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 577px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 577px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 577px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .contacts-group {
     background-image: url(../images/contacts-bg/contacts-tab@2x.webp);
-    background-position: top calc(50% + 450px) left;
+    background-position: top calc(50% + 220px) left;
     background-size: contain;
   }
 }
@@ -1420,12 +1445,12 @@ img {
 .section-contacts-form {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
-  padding: 84px 0px;
+  padding: 50px 0px;
 }
 @media screen and (min-width: 768px) {
   .section-contacts-form {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1595,12 +1620,12 @@ img {
 }
 
 .contacts {
-  padding: 84px 0px;
+  padding: 50px 0px;
 }
 @media screen and (min-width: 768px) {
   .contacts {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 @media screen and (min-width: 1200px) {
