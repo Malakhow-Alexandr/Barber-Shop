@@ -1331,11 +1331,21 @@ img {
   background-color: #303030;
 }
 
-.gallery-card-set {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
+@media screen and (min-width: 768px) {
+  .gallery-card-set {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-card-set__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .gallery-card-set__img {

@@ -36,8 +36,17 @@
 }
 .gallery-card-set {
   @extend %list;
-  display: flex;
-  gap: 30px;
+  
+  @media screen and (min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+.gallery-card-set__item:not(:last-child){
+  @media screen and (max-width:767px) {
+    margin-bottom: 30px;
+  }
 }
 .gallery-card-set__img {
   box-shadow: $card-shadow;
