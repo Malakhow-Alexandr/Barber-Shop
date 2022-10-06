@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
+  perspective: 1000px;
   @media screen and (max-width: 576px) {
     background-image: url(../images/prices-bg/price-mob@1x.webp);
 
@@ -73,43 +74,6 @@
     line-height: calc(47 / 40);
   }
 }
-.prices-meta-container {
-  perspective: 1000px;
-  @media screen and (max-width: 1199px) {
-    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
-    padding: 30px;
-    margin-bottom: 44px;
-  }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-  }
-}
-
-.prices-meta-container__list {
-  @extend %list;
-  max-width: 585px;
-
-  transition: transform 300ms $timing-function;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 50px;
-    padding: 30px 40px;
-    width: 585px;
-  }
-  &:not(:last-child) {
-    @media screen and (max-width: 1199px) {
-      margin-bottom: 20px;
-    }
-  }
-  .prices:hover & {
-    animation-name: open;
-  }
-}
-
 @keyframes open {
   0% {
     transform: rotateY(0deg);
@@ -128,6 +92,54 @@
     transform: rotateY(0deg);
   }
 }
+.prices-meta-container {
+  transition: transform 300ms $timing-function;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  
+  @media screen and (max-width: 1199px) {
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    padding: 30px;
+    margin-bottom: 44px;
+    animation-name: open;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.prices-meta-container__list {
+  @extend %list;
+  max-width: 685px;
+
+  transition: transform 300ms $timing-function;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    padding: 30px 40px;
+    width: 585px;
+  }
+  &:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+  }
+  .prices:hover & {
+    @media screen and (min-width:1200px) {
+      animation-name: open;
+    }
+    
+  }
+}
+
+
 
 .prices-meta-container__list:first-child {
   @media screen and (min-width: 1200px) {
