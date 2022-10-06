@@ -15,7 +15,7 @@
   @extend %container;
   display: flex;
   flex-direction: column-reverse;
-  gap:64px;
+  gap: 44px;
   @media screen and (min-width:1200px) {
     flex-direction: row;
     gap: 130px;
@@ -43,8 +43,14 @@
   padding: 20px 36px;
   text-align: center;
   background-color: #f7f7f7;
-  @media screen and (min-width:320px) and (max-width:400px) {
+  @media screen and (min-width:320px) and (max-width:350px) {
     max-width: 130px;
+  }
+  @media screen and (min-width:350px) and (max-width:380px) {
+    max-width: 145px;
+  }
+  @media screen and (min-width:381px) and (max-width:399px) {
+    max-width: 155px;
   }
   @media screen and (min-width:401px) and (max-width:449px) {
     max-width:160px;
@@ -69,6 +75,10 @@
   text-align: center;
   letter-spacing: 0.05em;
   color: $title-text-color-light-theme;
+  @media screen and (max-width:479px) {
+    font-size: 34px;
+    line-height: calc(47 / 34);
+  }
 }
 .benefits-left-container__decor {
   font-weight: 600;
