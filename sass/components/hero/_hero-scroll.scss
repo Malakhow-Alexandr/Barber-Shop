@@ -1,8 +1,8 @@
 .slider-container {
  position: absolute;
   top: 0;
-  left: -15px;
-  width: 112%;
+  left: -20px;
+  width: 115%;
   height: 100%;
   margin: 0;
   @media screen and (min-width:449px) and (max-width:767px) {
@@ -19,7 +19,14 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
- @media screen and (max-width: 576px) {
+  @media screen and (min-width:320px) and (max-width: 479px) {
+    background-image: url(../images/hero-bg/hero1-mob_small@1x.webp);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/hero-bg/hero1-mob_small@2x.webp);
+    }
+  }
+ @media screen and (min-width:480px) and (max-width: 576px) {
     background-image: url(../images/hero-bg/hero1-mob@1x.webp);
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
