@@ -1425,14 +1425,14 @@ img {
 @media screen and (min-width: 577px) and (max-width: 1199px) {
   .contacts-group {
     background-image: url(../images/contacts-bg/contacts-tab@1x.webp);
-    background-position: top calc(50% + 220px) left;
+    background-position: top calc(50% + 270px) left;
     background-size: contain;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 577px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 577px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 577px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .contacts-group {
     background-image: url(../images/contacts-bg/contacts-tab@2x.webp);
-    background-position: top calc(50% + 220px) left;
+    background-position: top calc(50% + 270px) left;
     background-size: contain;
   }
 }
@@ -1465,8 +1465,8 @@ img {
 }
 @media screen and (min-width: 768px) {
   .section-contacts-form {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1489,12 +1489,14 @@ img {
 .contacts-group-form__form-field {
   position: relative;
 }
-.contacts-group-form__form-field:first-child {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .contacts-group-form__form-field:first-child {
+    margin-right: 30px;
+  }
 }
 
 .contacts-group-form__form-input {
-  width: 250px;
+  width: 100%;
   min-height: 24px;
   margin-bottom: 44px;
   border: none;
@@ -1558,6 +1560,21 @@ img {
 }
 .contacts-group-form__form-input:focus::placeholder {
   opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  .contacts-group-form__form-input {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts-group-form__form-input {
+    width: 320px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-group-form__form-input {
+    width: 250px;
+  }
 }
 
 .contacts-group-form__form-label {
@@ -1640,8 +1657,8 @@ img {
 }
 @media screen and (min-width: 768px) {
   .contacts {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1661,10 +1678,37 @@ img {
   letter-spacing: 0.05em;
   color: #FFFFFF;
 }
+@media screen and (max-width: 767px) {
+  .contacts__title {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 
 .contacts__address {
-  margin-bottom: 70px;
   font-style: normal;
+}
+@media screen and (max-width: 767px) {
+  .contacts__address {
+    margin-bottom: 44px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__address {
+    margin-right: 110px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__address {
+    margin-bottom: 70px;
+  }
 }
 
 .contacts__list-item:not(:last-child) {
@@ -1744,7 +1788,7 @@ img {
 }
 
 .contacts-form-message {
-  width: 96%;
+  width: 100%;
   min-height: 24px;
   border: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
@@ -1816,6 +1860,16 @@ img {
 .contacts-form-message:focus::placeholder {
   opacity: 1;
 }
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .contacts-form-message {
+    width: 98%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts-form-message {
+    width: 96%;
+  }
+}
 
 .contacts-group-form__form-message-label {
   display: block;
@@ -1843,6 +1897,12 @@ img {
 }
 .contacts-form-message:not(:placeholder-shown) + .contacts-group-form__form-message-label {
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts-group__button-container {
+    text-align: center;
+  }
 }
 
 .contacts-group__button {

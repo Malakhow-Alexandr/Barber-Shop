@@ -24,11 +24,11 @@
 
   @media screen and (min-width: 577px) and (max-width: 1199px) {
     background-image: url(../images/contacts-bg/contacts-tab@1x.webp);
-    background-position: top calc(50% + 220px) left;
+    background-position: top calc(50% + 270px) left;
     background-size: contain;
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url(../images/contacts-bg/contacts-tab@2x.webp);
-      background-position: top calc(50% + 220px) left;
+      background-position: top calc(50% + 270px) left;
       background-size: contain;
     }
   }

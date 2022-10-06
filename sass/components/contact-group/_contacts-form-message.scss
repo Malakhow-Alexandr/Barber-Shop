@@ -4,7 +4,7 @@
 }
 
 .contacts-form-message {
-  width: 96%;
+  width: 100%;
   min-height: 24px;
   border: none;
   border-bottom: 1px solid $form-text-color;
@@ -32,6 +32,13 @@
   }
   &:focus::placeholder {
     opacity: 1;
+  }
+  @media screen and (min-width:767px) and (max-width:1199px) {
+    width: 98%;
+  }
+
+  @media screen and (min-width:1200px) {
+    width: 96%;
   }
 }
 

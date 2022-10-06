@@ -1,3 +1,9 @@
+.contacts-group__button-container{
+@media screen and (max-width:767px) {
+    text-align: center;
+  }
+}
+
 .contacts-group__button {
   width: 160px;
   min-height: 40px;
