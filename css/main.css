@@ -86,9 +86,14 @@ img {
   transition: backdrop-filter 800ms ease-in, background-color 800ms ease-in;
   transition: backdrop-filter 800ms ease-in, background-color 800ms ease-in, -webkit-backdrop-filter 800ms ease-in;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 789px) {
   .header {
     width: 768px;
+  }
+}
+@media screen and (min-width: 790px) and (max-width: 1199px) {
+  .header {
+    width: 790px;
   }
 }
 @media screen and (min-width: 1200px) {
