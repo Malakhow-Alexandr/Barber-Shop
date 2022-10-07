@@ -38,20 +38,37 @@
   z-index: 100;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   height: 100%;
-  padding: 100px 40px;
   display: flex;
-  flex-direction: column;
-  background-color: white;
-  transform: translateX(130%);
-  transition: transform 250ms $timing-function;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 250ms $timing-function,
+  visibility 250ms $timing-function;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
   &.is-open {
-    transform: translateX(30%);
+    visibility: visible;
+    pointer-events: initial;
+    opacity: 1;
   }
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
+.menu-container__content {
+  width: 70%;
+  height: 100%;
+  padding: 100px 40px;
+  margin-left: auto;
+  background-color: white;
+  transform:translateX(100%);
+  transition: transform 250ms $timing-function;
+  transition-delay: 250ms;
+  .menu-container.is-open & {
+    transform:translateX(0%);
+  }
+
   @media screen and (max-width: 479px) {
     padding-top: 50px;
     padding-left: 20px;

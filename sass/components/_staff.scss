@@ -104,6 +104,10 @@
   line-height: calc(25 / 18);
   letter-spacing: 0.02em;
   color: $primary-text-color;
+  @media screen and (max-width:480px) {
+    font-size: 17px;
+   line-height: calc(20 / 17);
+  }
 }
 .staff-card-set__meta-container {
   padding: 30px 82px;

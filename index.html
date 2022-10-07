@@ -245,7 +245,12 @@
             <li class="staff-card-set__item">
               <div class="staff-card-set__thumb">
                 <div class="staff-card-set__overlay-thumb">
-                  <img src="./images/John.jpg" alt="John Smith">
+                  <picture>
+                <source media="(min-width:1200px)" srcset="./images/staff/team@1x.jpg 1x, ./images/staff/team@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="./images/staff/John-tab@1x.jpg 1x, ./images/staff/John-tab@2x.jpg 2x">
+                <source media="(max-width:767px)" srcset="./images/staff/John-mob@1x.jpg 1x, ./images/staff/John-mob@2x.jpg 2x">
+                <img src="./images/staff/John-mob@1x.jpg" alt="barber John Smith">
+                  </picture>
                   <div class="staff-card-set__card-overlay">
                     <p class="staff-card-set__overlay-text"
                       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, incidunt!
@@ -295,7 +300,12 @@
             <li class="staff-card-set__item">
               <div class="staff-card-set__thumb">
                 <div class="staff-card-set__overlay-thumb"
-                  ><img src="./images/Michele.jpg" alt="">
+                  ><picture>
+                    <source media="(min-width:1200px)" srcset="./images/staff/team2@1x.jpg 1x, ./images/staff/team2@2x.jpg 2x">
+                    <source media="(min-width:768px)" srcset="./images/staff/Michele-tab@1x.jpg 1x, ./images/staff/Michele-tab@2x.jpg 2x">
+                    <source media="(max-width:767px)" srcset="./images/staff/Michele-mob@1x.jpg 1x, ./images/staff/Michele-mob@2x.jpg 2x">
+                    <img src="./images/staff/Michele-mob@1x.jpg" alt="barber Michele Doe">
+                  </picture>
                   <div class="staff-card-set__card-overlay">
                     <p class="staff-card-set__overlay-text"
                       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, incidunt!
@@ -345,7 +355,12 @@
             <li class="staff-card-set__item">
               <div class="staff-card-set__thumb">
                 <div class="staff-card-set__overlay-thumb"
-                  ><img src="./images/Alan.jpg" alt="">
+                  ><picture>
+                    <source media="(min-width:1200px)" srcset="./images/staff/team3@1x.jpg 1x, ./images/staff/team3@2x.jpg 2x">
+                    <source media="(min-width:768px)" srcset="./images/staff/Alan-tab@1x.jpg 1x, ./images/staff/Alan-tab@2x.jpg 2x">
+                    <source media="(max-width:767px)" srcset="./images/staff/Alan-mob@1x.jpg 1x, ./images/staff/Alan-mob@2x.jpg 2x">
+                    <img src="./images/staff/Alan-mob@1x.jpg" alt="barber Alan Black">
+                  </picture>
                   <div class="staff-card-set__card-overlay">
                     <p class="staff-card-set__overlay-text"
                       >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, incidunt!
@@ -664,6 +679,7 @@
     </div>
     <!-- mobile-menu -->
     <div class="menu-container js-menu-container" id="mobile-menu">
+      <div class="menu-container__content">
       <button class="menu-toggle js-close-menu burger__button-close">
         <svg width="40" height="40">
           <use href="./icon/icon.svg#close-burger"></use>
@@ -702,6 +718,7 @@
           <a class="burger-menu__socials-link" href="#">Youtube</a>
         </li>
       </ul>
+    </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
