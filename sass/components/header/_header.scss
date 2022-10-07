@@ -1,11 +1,17 @@
 .header {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
-  max-width: 1170px;
+  
   transition: backdrop-filter $hero-animation, background-color $hero-animation;
+  @media screen and (min-width:768px) and (max-width:1199px) {
+    width: 768px;
+  }
+  @media screen and (min-width:1200px) {
+  width: 1200px;
+}
+
 }
 .header.no-transparency {
   backdrop-filter: blur(4px);
@@ -13,15 +19,25 @@
 }
 .header__container {
   @extend %container;
-  @media screen and (min-width:1200px){
+  @media screen and (min-width:768px){
     display: flex;
   align-items: center;
+  padding-left: 16px;
+    
+  }
+  @media screen and (min-width:1200px){
   padding-left: 30px;
     
   }
 }
 .logo {
-  margin-right: 132px;
+  @media screen and (min-width:768px) and (max-with:1199px) {
+    display:block;
+    padding: 100px;
+  }
+  @media screen and (min-width:1200px) {
+    margin-right: 132px;
+  }
 }
 .logo__icon {
   fill: $title-text-color-light-theme;

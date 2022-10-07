@@ -3,6 +3,7 @@
   align-items: center;
   margin-left: auto;
   gap: 45px;
+  
 }
 
 .order-container__tell {
@@ -19,5 +20,8 @@
   &:focus {
     color: $accent-color;
     transform: scale(1.4);
+  }
+  @media screen and (max-width:1199px) {
+    display: none;
   }
 }
