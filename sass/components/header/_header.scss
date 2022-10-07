@@ -4,7 +4,6 @@
   top: 0;
   left: 0;
   z-index: 10;
-  
   transition: backdrop-filter $hero-animation, background-color $hero-animation;
 
 }
@@ -24,7 +23,7 @@
 }
 .logo {
   display:block;
-  padding: 20px 0px 20px;
+  padding: 20px 0px 20px 0px;
   
   @media screen and (min-width:768px) and (max-with:1199px) {
     display:block;

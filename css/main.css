@@ -110,7 +110,7 @@ img {
 
 .logo {
   display: block;
-  padding: 20px 0px 20px;
+  padding: 20px 0px 20px 0px;
 }
 @media screen and (min-width: 768px) and (max-with: 1199px) {
   .logo {
@@ -529,29 +529,26 @@ img {
   position: absolute;
   top: 0;
   left: -20px;
-  width: 115%;
+  max-width: 110%;
   height: 100%;
   margin: 0;
 }
-@media screen and (min-width: 449px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .slider-container {
     left: -33px;
     width: 480px;
-    height: 100%;
   }
 }
-@media screen and (min-width: 767px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .slider-container {
     left: 0;
     width: 570px;
-    height: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .slider-container {
     left: 0;
     width: 1071px;
-    height: 100%;
   }
 }
 
