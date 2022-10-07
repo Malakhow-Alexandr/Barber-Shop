@@ -59,7 +59,8 @@
         </nav>
         <div class="order-container">
           <a href="tel:+380441111111" class="order-container__tell">+38 044 111 11 11</a
-          ><button
+          >
+          <button
             type="button"
             class="order-container__button animate__animated animate__shakeX"
             data-modal-open
@@ -67,6 +68,16 @@
             Online-booking
           </button>
         </div>
+        <button
+          class="burger-button-open menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
+          <svg width="40" height="40">
+            <use href="./icon/icon.svg#open-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -651,6 +662,47 @@
         </form>
       </div>
     </div>
+    <!-- mobile-menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu burger__button-close">
+        <svg width="40" height="40">
+          <use href="./icon/icon.svg#close-burger"></use>
+        </svg>
+      </button>
+      <ul class="burger-menu__nav">
+        <li class="burger-menu__nav-item">
+          <a class="burger-menu__nav-link burger-menu__nav-link--current" href="№">About</a>
+        </li>
+        <li class="burger-menu__nav-item">
+          <a class="burger-menu__nav-link" href="./portfolio.html">Services and prices</a>
+        </li>
+        <li class="burger-menu__nav-item">
+          <a class="burger-menu__nav-link" href="#">Barbers</a>
+        </li>
+        <li class="burger-menu__nav-item">
+          <a class="burger-menu__nav-link" href="#">Contacts</a>
+        </li>
+      </ul>
+      <div class="burger-menu__order-container">
+          <a href="tel:+380441111111" class="burger-menu__tell">+38 044 111 11 11</a
+          >
+          <button
+            type="button"
+            class="burger-menu__order-button animate__animated animate__shakeX"
+            data-modal-open
+          >
+            Online-booking
+          </button>
+        </div>
+      <ul class="burger-menu__socials">
+        <li class="burger-menu__socials-item">
+          <a class="burger-menu__socials-link" href="#">Instagram</a>
+        </li>
+        <li class="burger-menu__socials-item">
+          <a class="burger-menu__socials-link" href="#">Youtube</a>
+        </li>
+      </ul>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/aos-animate.js"></script>
@@ -663,5 +715,12 @@
     <script src="./js/modal.js"></script>
     <script src="./js/header-scroll.js"></script>
     <script src="./js/slider.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

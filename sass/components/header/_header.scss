@@ -14,19 +14,18 @@
 }
 .header__container {
   @extend %container;
-  @media screen and (min-width:768px){
-    display: flex;
+  display: flex;
   align-items: center;
-  padding-left: 16px;
-   
-    
-  }
+  
   @media screen and (min-width:1200px){
   padding-left: 30px;
     
   }
 }
 .logo {
+  display:block;
+  padding: 20px 0px 20px;
+  
   @media screen and (min-width:768px) and (max-with:1199px) {
     display:block;
     padding: 100px;
@@ -43,6 +42,9 @@
   transform: scale(1.5);
   fill: $accent-color;
 }
+@media screen and (max-width:767px) {
+    fill:$primary-text-color;
+  }
 }
 
 

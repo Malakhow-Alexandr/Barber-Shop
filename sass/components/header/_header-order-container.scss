@@ -3,7 +3,9 @@
   align-items: center;
   margin-left: auto;
   gap: 45px;
-  
+  @media screen and (max-width:767px) {
+    display: none;
+  }
 }
 
 .order-container__tell {
