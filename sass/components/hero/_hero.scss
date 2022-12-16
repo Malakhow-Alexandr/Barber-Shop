@@ -1,12 +1,11 @@
 .hero {
   padding: 0;
 }
-.hero__container{
+.hero__container {
   @extend %container;
   position: relative;
-  
-  @media screen and (min-width:720px) { 
+
+  @media screen and (min-width: 720px) {
     display: flex;
   }
 }
-

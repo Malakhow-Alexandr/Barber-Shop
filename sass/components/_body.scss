@@ -1,11 +1,11 @@
-body{
-    background-color: $primary-bg-color;
-    font-family: 'Open Sans',sans-serif;
-    font-weight: 400;
-    color: $title-text-color-light-theme;
-    &.modal-open {
-      overflow: hidden;
-    }
+body {
+  background-color: $primary-bg-color;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: $title-text-color-light-theme;
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 a {

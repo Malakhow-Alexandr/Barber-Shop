@@ -51,11 +51,10 @@
   &:not(:placeholder-shown) {
     border-color: $susses-color;
   }
-&::placeholder {
+  &::placeholder {
     opacity: 0;
     transition: opacity 250ms $timing-function;
   }
-
 
   &:focus::placeholder {
     opacity: 1;
@@ -81,14 +80,17 @@
   right: 10px;
   transform: translateY(-50%);
   display: block;
-
 }
 
-.register-form__input:not(:placeholder-shown):focus:invalid ~ .register-form__notification-icon .warning {
+.register-form__input:not(:placeholder-shown):focus:invalid
+  ~ .register-form__notification-icon
+  .warning {
   opacity: 1;
 }
 
-.register-form__input:not(:placeholder-shown):focus:valid ~ .register-form__notification-icon .success {
+.register-form__input:not(:placeholder-shown):focus:valid
+  ~ .register-form__notification-icon
+  .success {
   opacity: 1;
 }
 .success,
@@ -129,5 +131,3 @@
   margin-bottom: 10px;
   font-size: 14px;
 }
-
-
